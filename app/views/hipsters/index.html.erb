@@ -1,0 +1,10 @@
+<table>
+  <th>Hipsters</th>
+  <% @hipster.each do |hipster| %>
+  <tr>
+    <td><%= link_to hipster.name, hipster_path(hipster) %></td>
+    <td><%=%></td>
+    <td><%=%></td>
+  </tr>
+  <% end %>
+</table>

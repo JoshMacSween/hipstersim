@@ -1,0 +1,3 @@
+class Hipster < ApplicationRecord
+
+end
