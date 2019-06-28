@@ -1,2 +1,13 @@
-<h1>Hipsters#edit</h1>
-<p>Find me in app/views/hipsters/edit.html.erb</p>
+<h3>Edit a Hipster</h3>
+
+<%= form_with model: @hipster do |form| %>
+<%= form.text_field :name, placeholder: "Name"%>
+<%= form.text_field :beer, placeholder: "Favorite Beer"%>
+<%= form.text_field :coffee, placeholder: "Favorite Coffee"%>
+<%= form.text_field :quote, placeholder: "Words to live by"%>
+
+<%= form.submit %>
+
+<% end %>
+
+<%= link_to 'Back', hipsters_path %>

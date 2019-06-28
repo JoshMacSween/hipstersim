@@ -17,6 +17,14 @@ class HipstersController < ApplicationController
   end
 
   def edit
+    @hipster = Hipster.find(params[:id])
+  end
+
+  def update
+    @hipster = Hipster.find(params[:id])
+    @hipster.update(hipster_params)
+
+    redirect_to hipster_path(@hipster)
   end
 
   def destroy
