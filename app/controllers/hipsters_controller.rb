@@ -8,8 +8,8 @@ class HipstersController < ApplicationController
   end
 
   def create
-    @hipster = Hipster.create
-    redirect_to hipsters_path
+    @hipster = Hipster.create(hipster_params)
+    redirect_to new_hipsters_path
   end
 
   def show
@@ -28,7 +28,7 @@ class HipstersController < ApplicationController
   end
 
   def destroy
-    @hipster = Hipster.find(hipster_params[:id])
+    @hipster = Hipster.find(params[:id])
     @hipster.destroy
 
     redirect_to hipsters_path

@@ -1,2 +1,8 @@
-<h1>Hipsters#new</h1>
-<p>Find me in app/views/hipsters/new.html.erb</p>
+<h3>Create your very own hipster!</h3>
+<%= form_with model: @hipster do |form| %>
+  <%= form.text_field :name, placeholder: "Name" %>
+  <%= form.text_field :beer, placeholder: "Favorite Beer"%>
+  <%= form.text_field :coffee, placeholder: "Coffee Notes"%>
+  <%= form.text_field :quote, placeholder: "Words of wisdom"%>
+  <%= form.submit %>
+<% end %>

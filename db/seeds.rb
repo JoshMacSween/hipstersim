@@ -13,6 +13,6 @@ require 'faker'
     name: Faker::Name.name,
     beer: Faker::Beer.style,
     coffee: Faker::Coffee.notes,
-    quote: Faker::Hipster.words
+    quote: Faker::Hipster.sentence
   )
 end
