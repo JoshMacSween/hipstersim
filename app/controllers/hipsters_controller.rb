@@ -9,7 +9,7 @@ class HipstersController < ApplicationController
 
   def create
     @hipster = Hipster.create(hipster_params)
-    redirect_to new_hipsters_path
+    redirect_to hipsters_path
   end
 
   def show

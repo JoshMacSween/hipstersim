@@ -1,3 +1,4 @@
+<div class="jumbotron">
 <h3>Edit a Hipster</h3>
 
 <%= form_with model: @hipster do |form| %>
@@ -9,5 +10,7 @@
 <%= form.submit %>
 
 <% end %>
+<br>
+<a class="btn btn-primary" href="/hipsters">Back</a>
 
-<%= link_to 'Back', hipsters_path %>
+</div>
