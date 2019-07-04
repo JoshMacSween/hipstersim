@@ -8,7 +8,7 @@ class HipstersController < ApplicationController
   end
 
   def create
-    @hipster = Hipster.create(hipster_params)
+    Hipster.create(hipster_params)
     redirect_to hipsters_path
   end
 
@@ -33,4 +33,9 @@ class HipstersController < ApplicationController
 
     redirect_to hipsters_path
   end
+
+  private
+    def hipster_params
+      params.require(:hipster).permit(:name, :beer, :coffee, :quote)
+    end
 end
