@@ -3,11 +3,11 @@
     <th><a href="/hipsters/new">
     <button>New</button>
   </a></th>
-  <% @hipster.each do |hipster| %>
-    <tr>
-      <td><%= link_to hipster.name, hipster_path(hipster) %></td>
-      <td><%= link_to "Edit", edit_hipster_path(hipster)%></td>
-      <td><%= link_to "Delete", hipster_path(hipster), method: "delete", data: { confirm: "are you sure?"} %></td>
-    </tr>
-  <% end %>
+    <% @hipster.each do |hipster| %>
+      <tr>
+        <td><%= link_to hipster.name, hipster_path(hipster) %></td>
+        <td><%= link_to "Edit", edit_hipster_path(hipster)%></td>
+        <td><%= link_to "Delete", hipster_path(hipster), method: "delete", data: { confirm: "are you sure?"} %></td>
+      </tr>
+    <% end %>
   </table>
