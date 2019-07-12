@@ -1,6 +1,6 @@
 <div class="jumbotron">
 <h3>Create your very own hipster!</h3>
-<%= form_with model: @hipster do |form| %>
+<%= effective_form_with model: @hipster do |form| %>
   <%= form.text_field :name, placeholder: "Name" %>
   <%= form.text_field :beer, placeholder: "Favorite Beer"%>
   <%= form.text_field :coffee, placeholder: "Coffee Notes"%>
