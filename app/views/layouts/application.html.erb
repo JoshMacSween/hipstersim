@@ -4,15 +4,15 @@
     <title>Hipstersim</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-<div class="container">
-  <div class="jumbotron">
-    <body>
-      <%= yield %>
-    </body>
+    <body class="background-image">
+      <div class="container">
+        <div class="jumbotron bg-grey my-3 px-3 py-5 rounded">
+          <%= yield %>
+        </div>
+      </div>
     </div>
-  </div>
+  </body>
 </html>

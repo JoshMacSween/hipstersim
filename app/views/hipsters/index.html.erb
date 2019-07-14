@@ -1,9 +1,6 @@
-<div class="container">
-    <table class="table">
-      <th>Hipsters</th>
-      <th><a href="/hipsters/new">
-      <button>New</button>
-    </a></th>
+  <table class="table">
+    <th>Hipsters</th>
+    <th><a href="/hipsters/new"><button>New</button></a></th>
     <% @hipster.each do |hipster| %>
       <tr>
         <td><%= link_to hipster.name, hipster_path(hipster) %></td>
@@ -12,4 +9,3 @@
       </tr>
     <% end %>
   </table>
-</div>
