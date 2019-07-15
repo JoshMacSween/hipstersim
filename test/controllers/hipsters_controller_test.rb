@@ -21,9 +21,9 @@ class HipstersControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get create" do
-    get hipsters_create_path
-    assert_response :success
+  test "should create hipster" do
+    post hipsters_path params: { hipster: { name:"Josh", beer:"Belgian", coffee:"Right Now", quote:"Stay Curious, Friends!" } }
+    assert_redirected_to hipsters_path
   end
 
   test "should get show" do
@@ -41,9 +41,8 @@ class HipstersControllerTest < ActionDispatch::IntegrationTest
   test "should get delete" do
     #hipster = hipsters(:one)
     assert_difference('Hipster.count', -1) do
-      delete hipster_url(@hipster)
+      delete hipster_path(@hipster)
     end
-    assert_response :success
     assert_redirected_to hipsters_path
   end
 
