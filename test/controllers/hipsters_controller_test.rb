@@ -1,34 +1,49 @@
 require 'test_helper'
 
 class HipstersControllerTest < ActionDispatch::IntegrationTest
+
+  #called before every test
+  setup do
+    @hipster = hipsters(:one)
+  end
+
+  teardown do
+    Rails.cache.clear
+  end
+
   test "should get index" do
-    get hipsters_index_url
+    get root_path
     assert_response :success
   end
 
   test "should get new" do
-    get hipsters_new_url
+    get new_hipster_path
     assert_response :success
   end
 
-  test "should get create" do
-    get hipsters_create_url
-    assert_response :success
+  test "should create hipster" do
+    post hipsters_path params: { hipster: { name:"Josh", beer:"Belgian", coffee:"Right Now", quote:"Stay Curious, Friends!" } }
+    assert_redirected_to hipsters_path
   end
 
   test "should get show" do
-    get hipsters_show_url
+    #hipster = hipsters(:one)
+    get hipster_url(@hipster)
     assert_response :success
   end
 
   test "should get edit" do
-    get hipsters_edit_url
+    #hipster = hipsters(:one)
+    get edit_hipster_path(@hipster)
     assert_response :success
   end
 
-  test "should get destroy" do
-    get hipsters_destroy_url
-    assert_response :success
+  test "should get delete" do
+    #hipster = hipsters(:one)
+    assert_difference('Hipster.count', -1) do
+      delete hipster_path(@hipster)
+    end
+    assert_redirected_to hipsters_path
   end
 
 end

@@ -1,4 +1,6 @@
 class HipstersController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
+
   def index
     @hipster = Hipster.all
   end
