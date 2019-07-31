@@ -1,27 +1,30 @@
-<!--
+
 <h3>Create your very own hipster!</h3>
-<%= form_with model: @hipster do |form| %>
+<%= effective_form_with model: @hipster do |form| %>
   <%= form.text_field :name, placeholder: "Name" %>
   <%= form.text_field :beer, placeholder: "Favorite Beer"%>
   <%= form.text_field :coffee, placeholder: "Coffee Notes"%>
   <%= form.text_field :quote, placeholder: "Words of wisdom"%>
-  <%= form.submit %>
+  <%= form.submit(left: true) %>
 <% end %>
-<br>
 <a class="btn btn-secondary" href="/hipsters">Back</a>
--->
+
+
+<!--
 <div class="form">
   <%= form_with model: @hipster do |form| %>
     <p class="lead">Name your hipster, yo!</p>
-      <%= form.text_field :name, :size => "133", placeholder: "Name"%>
+      <%= form.text_field :name, :size => "110", placeholder: "Name"%>
     <p class="lead">They don't have an opinion on beer, do they?</p>
-      <%= form.text_field :beer, :size => "133", placeholder: "Of course they do"%>
+      <%= form.text_field :beer, :size => "110", placeholder: "Of course they do"%>
     <p class="lead">On coffee?</p>
-      <%= form.text_field :coffee, :size => "133", placeholder: "On everything"%>
+      <%= form.text_field :coffee, :size => "110", placeholder: "On everything"%>
     <p class="lead">Go ahead, tell us what they're all about</p>
-      <%= form.text_field :quote, :size => "133", placeholder: "Words of wisdom"%>
-
+      <%= form.text_field :quote, :size => "110", placeholder: "Words of wisdom"%>
+      <br>
       <%= form.submit :class => "myBtn"%>
   <% end %>
 </div>
+
+-->
 
