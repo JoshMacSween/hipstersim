@@ -4,6 +4,5 @@ class Hipster < ApplicationRecord
   validates :beer, presence: true
   validates :coffee, presence: true
   validates :quote, presence: true
-
 end
 
