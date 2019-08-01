@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2019_07_31_215641) do
     t.string "title"
     t.string "category"
     t.string "color"
+    t.integer "hipster_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
