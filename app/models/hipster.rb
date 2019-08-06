@@ -1,5 +1,6 @@
 class Hipster < ApplicationRecord
-  has_many :hats
+  has_many :things
+  accepts_nested_attributes_for :things 
   validates :name, presence: true
   validates :beer, presence: true
   validates :coffee, presence: true

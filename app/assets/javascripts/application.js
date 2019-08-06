@@ -19,3 +19,4 @@
 //= require popper
 //= require bootstrap
 //= require effective_bootstrap
+//= require cocoon
