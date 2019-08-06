@@ -40,6 +40,7 @@ class HipstersController < ApplicationController
 
   private
     def hipster_params
-      params.require(:hipster).permit(:name, :beer, :coffee, :quote)
+      params.require(:hipster).permit(:name, :beer, :coffee, :quote, :hipster_id,
+        things_attributes: [:id, :title, :category, :color])
     end
 end

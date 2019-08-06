@@ -1,14 +1,25 @@
 
 <h3>Create your very own hipster!</h3>
-<%= effective_form_with model: @hipster do |form| %>
-  <%= form.text_field :name, placeholder: "Name" %>
-  <%= form.text_field :beer, placeholder: "Favorite Beer"%>
-  <%= form.text_field :coffee, placeholder: "Coffee Notes"%>
-  <%= form.text_field :quote, placeholder: "Words of wisdom"%>
-  <%= form.submit(left: true) %>
+<%= effective_form_with model: @hipster do |f| %>
+  <%= f.text_field :name, placeholder: "Name" %>
+  <%= f.text_field :beer, placeholder: "Favorite Beer"%>
+  <%= f.text_field :coffee, placeholder: "Coffee Notes"%>
+  <%= f.text_field :quote, placeholder: "Words of wisdom"%>
+  <%= f.text_field :hipster_id %>
+
+  <h3>Things</h3>
+  <div id="things">
+    <%= f.fields_for :things do |thing| %>
+      <%= render 'things/fields', f: f %>
+    <% end %>
+    <div id="links">
+      <%= link_to_add_association 'add thing', f, :things %>
+    </div>
+  </div>
+
+  <%= f.submit(left: true) %>
 <% end %>
 <a class="btn btn-secondary" href="/hipsters">Back</a>
-
 
 <!--
 <div class="form">
