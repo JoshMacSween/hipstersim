@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
+gem 'pgreset'
 gem 'cocoon'
 gem 'faker', '~> 1.9', '>= 1.9.4'
 gem 'bootstrap'

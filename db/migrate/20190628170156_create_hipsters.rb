@@ -5,7 +5,6 @@ class CreateHipsters < ActiveRecord::Migration[5.2]
       t.string :beer
       t.string :coffee
       t.string :quote
-      t.integer :hipster_id
       t.timestamps
     end
   end
