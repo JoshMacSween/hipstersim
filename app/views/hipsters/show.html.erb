@@ -3,6 +3,11 @@
   <p class="lead">My favourite beer is <%= @hipster.beer%></p>
   <p class="lead">I really preffer coffee with "<%=@hipster.coffee%> notes, you know?"</p>
   <p>"<%=@hipster.quote%>" - Amirite?</p>
-  <a class="btn btn-primary" href="/hipsters">Back</a>
 
+  <%= @hipster.things.each do |thing| %>
+    <%= render 'thing' %>
+  <% end %>
+
+  <a class="btn btn-primary" href="/hipsters">Back</a>
+  
 </div>

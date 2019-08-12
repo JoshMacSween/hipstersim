@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class HipstersController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: %i[index show]
 
   def index
     @hipster = Hipster.all
@@ -39,8 +41,9 @@ class HipstersController < ApplicationController
   end
 
   private
-    def hipster_params
-      params.require(:hipster).permit(:name, :beer, :coffee, :quote, :hipster_id,
-        things_attributes: [:id, :title, :category, :color])
-    end
+
+  def hipster_params
+    params.require(:hipster).permit(:name, :beer, :coffee, :quote, :hipster_id,
+                                    things_attributes: %i[id title category color])
+  end
 end
