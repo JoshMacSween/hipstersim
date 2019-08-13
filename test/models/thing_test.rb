@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-class HatTest < ActiveSupport::TestCase
+class ThingTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
