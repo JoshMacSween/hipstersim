@@ -6,7 +6,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.3'
 gem 'bootstrap'
 gem 'cocoon'
-gem 'devise', '~> 4.6', '>= 4.6.2'
+gem 'devise', '~> 4.7'
 gem 'effective_bootstrap', '~> 0.6.1'
 gem 'effective_resources', '~> 1.3', '>= 1.3.11'
 gem 'faker', '~> 1.9', '>= 1.9.4'
